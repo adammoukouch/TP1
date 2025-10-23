@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercice 7 - Formulaire d'inscription</title>
+</head>
+<body>
+  <h1>Créer un compte</h1>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Identité</legend>
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required><br><br>
+
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required><br><br>
+
+      <label for="date">Date de naissance :</label>
+      <input type="date" id="date" name="date" min="1900-01-01" max="2025-10-22" required>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Contact</legend>
+      <label for="tel">Téléphone :</label>
+      <input type="tel" id="tel" name="tel" pattern="^0[5-7]\d{8}$" title="Numéro marocain commençant par 05, 06 ou 07" required><br><br>
+
+      <label for="site">Site personnel :</label>
+      <input type="url" id="site" name="site" placeholder="https://exemple.com">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Sécurité</legend>
+      <label for="mdp">Mot de passe :</label>
+      <input type="password" id="mdp" name="mdp" minlength="8" required><br><br>
+
+      <label for="confirm">Confirmation :</label>
+      <input type="password" id="confirm" name="confirm" minlength="8" required>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Préférences</legend>
+      <input type="checkbox" id="news" name="news">
+      <label for="news">S’abonner à la newsletter</label><br><br>
+
+      <p>Rôle :</p>
+      <input type="radio" id="etudiant" name="role" value="etudiant" checked>
+      <label for="etudiant">Étudiant</label>
+      <input type="radio" id="pro" name="role" value="pro">
+      <label for="pro">Professionnel</label>
+    </fieldset>
+
+    <br>
+    <button type="submit">Créer le compte</button>
+  </form>
+</body>
+</html>
